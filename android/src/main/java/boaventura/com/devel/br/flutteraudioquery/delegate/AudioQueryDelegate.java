@@ -275,6 +275,9 @@ public class AudioQueryDelegate implements PluginRegistry.RequestPermissionsResu
     private void handleReadOnlyMethods(MethodCall call, MethodChannel.Result result){
 
         List<String> idList = null;
+        if(call == null){
+          return;
+        }
         switch (call.method){
 
             // artists calls section
